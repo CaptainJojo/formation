@@ -6,7 +6,7 @@ async GetBimObjects(){
     const results = await this.knexConnection
     .select()
     .from('bimobjects')
-    .limit(1000);
+    .limit(10);
     return results;
 }
 
