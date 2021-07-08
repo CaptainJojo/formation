@@ -1,3 +1,14 @@
-import {PSQLDataSource} from './psql-datasource';
+import PSQLDataSource from './psql-data-source';
 
-export default class bimobjectDataSource extends PSQLDataSource{}
+export default class BimobjectDataSource extends PSQLDataSource{
+
+async GetBimObjects(){
+    const results = await this.knexConnection
+    .select()
+    .from('bimobjects')
+    .limit(2);
+    return results;
+}
+
+}
+
