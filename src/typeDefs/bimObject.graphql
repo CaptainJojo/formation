@@ -5,6 +5,16 @@ type BimObject {
     classificationNodes: [ClassificationNode!]!
 }
 
+type BimObjectConnection {
+  edges: [BimObject!]!
+  pageInfo: PageInfo!
+}
+
+type BimObjectEdge {
+  node: BimObject!
+  cursor: String!
+}
+
 input BimObjectFilter {
   classificationNodeId: ID
   softwareId: ID
