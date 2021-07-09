@@ -6,7 +6,7 @@ type BimObject {
 }
 
 type BimObjectConnection {
-  edges: [BimObject!]!
+  edges: [BimObjectEdge!]!
   pageInfo: PageInfo!
 }
 

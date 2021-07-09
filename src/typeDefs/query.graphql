@@ -3,6 +3,6 @@
 # case, the "books" query returns an array of zero or more Books (defined above).
 type Query {
   books(limit: Int): [Book!]!
-  bimObjects(filter: BimObjectFilter): [BimObject!]!
+  bimObjects(filter: BimObjectFilter, first: Int!, After: String): BimObjectConnection!
 }
 
